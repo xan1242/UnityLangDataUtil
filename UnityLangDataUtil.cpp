@@ -8,7 +8,7 @@ bool ExtractLangdata(const char* inFilename, const char* outFilename)
     FILE* fin = fopen(inFilename, "rb");
     if (!fin)
     {
-        std::cerr << "ERROR: Can't open file" << inFilename << " for reading!\n";
+        std::cerr << "ERROR: Can't open file " << inFilename << " for reading!\n";
         perror("ERROR");
         return false;
     }
@@ -27,7 +27,7 @@ bool ExtractLangdata(const char* inFilename, const char* outFilename)
     if (!fout)
     {
         fclose(fin);
-        std::cerr << "ERROR: Can't open file" << outFilename << " for writing!\n";
+        std::cerr << "ERROR: Can't open file " << outFilename << " for writing!\n";
         perror("ERROR");
         return false;
     }
