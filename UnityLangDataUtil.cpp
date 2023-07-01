@@ -38,7 +38,7 @@ bool ExtractLangdata(const char* inFilename, const char* outFilename)
 
     for (uint32_t i = 0; i < strcount; i++)
     {
-        uint16_t len = 0;
+        uint32_t len = 0;
         uint8_t tst = 0;
         uint32_t unkval = 0;
         bool bContRead = 0;
@@ -53,7 +53,6 @@ bool ExtractLangdata(const char* inFilename, const char* outFilename)
             // skip unwanted bytes
             while (!bContRead)
             {
-                uint32_t shiftctr = 0;
                 fread(&tst, sizeof(char), 1, fin);
                 if ((tst > 0x1F) || (tst == 0xA))
                 {
